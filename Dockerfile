@@ -5,6 +5,7 @@ RUN apt-get update \
         ca-certificates \
         curl \
 	build-essential \
+	cmake \
 	libglib2.0-dev \
 	default-libmysqlclient-dev \ 
 	zlib1g-dev \
