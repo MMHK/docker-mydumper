@@ -4,6 +4,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
+	g++ \
+	git \
 	build-essential \
 	cmake \
 	libglib2.0-dev \
@@ -11,6 +13,9 @@ RUN apt-get update \
 	zlib1g-dev \
 	libpcre3-dev \
 	libssl-dev \
+	libmysqlclient-dev \
+	libperconaserverclient20-dev \
+	libmariadbclient-dev \
     && rm -rf /var/lib/apt/lists/*
 
 env RELEASE_VERSION=0.10.5
@@ -28,6 +33,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
         libmariadb3 \
+	libmysqlclient \
+	libatomic1 \
 	libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
