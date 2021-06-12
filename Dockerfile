@@ -13,7 +13,7 @@ RUN apt-get update \
 	libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-env RELEASE_VERSION=0.9.5
+env RELEASE_VERSION=0.10.5
 RUN set -ex \
     && curl -L -o mydumper.tar.gz --silent https://github.com/maxbube/mydumper/archive/v${RELEASE_VERSION}.tar.gz \
     && tar -xzf mydumper.tar.gz && rm -f mydumper.tar.gz \
